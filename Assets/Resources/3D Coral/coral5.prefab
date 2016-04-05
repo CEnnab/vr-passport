@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d78b6bcdf6fa46da8e6fcb14d0f4f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScale: {x: .300000012, y: .300000012, z: .300000012}
-  maxScale: {x: 1.5, y: 1.5, z: 1.5}
+  minScale: {x: .600000024, y: .600000024, z: .600000024}
+  maxScale: {x: 2.5, y: 2.5, z: 2.5}
   possibleColors: []
   rotatedCopyCount: 0
   blendColors: 1
@@ -102,7 +102,31 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: minScale.x
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minScale.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minScale.z
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 168544}

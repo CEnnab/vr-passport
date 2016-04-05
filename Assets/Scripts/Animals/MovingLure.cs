@@ -17,25 +17,27 @@ public class MovingLure : MonoBehaviour {
 	public float range=10f;
 
 	private PlayerLookHistory playerLookHistory;
-	private Vector3 previousPosition,targetPosition;
+	private Vector3 previousOffset,targetOffset;
 	private float timer=0;
+	private GameObject player;
 
 	void Start () {
-		targetPosition = gameObject.transform.position;
+		targetOffset = gameObject.transform.position;
 		playerLookHistory = FindObjectOfType<PlayerLookHistory> ();
 		if (playerLookHistory == null)
 			playerLookHistory=Camera.main.gameObject.AddComponent<PlayerLookHistory>();
+		player = Camera.main.gameObject;
 
 	}
 
 	void Update () {
 		timer += Time.deltaTime;
 		if (timer > refreshInterval) {
-			previousPosition = targetPosition;
-			targetPosition = playerLookHistory.GetAverageLookPosition (range);
+			previousOffset = targetOffset;
+			targetOffset = playerLookHistory.GetAverageLookPosition (range);
 			timer = 0;
 		}
 		float ratio = timer / refreshInterval;
-		transform.position = Vector3.Lerp (previousPosition, targetPosition, ratio);
+		transform.position = player.transform.position+ Vector3.Lerp (previousOffset, targetOffset, ratio);
 	}
 }
