@@ -1,0 +1,1 @@
+This is a free and open source project! That means that for any sounds you find, you must include license information in the "LICENSE.txt" file. It should have a free culture license, perhaps one that only requires attribution for our full use.

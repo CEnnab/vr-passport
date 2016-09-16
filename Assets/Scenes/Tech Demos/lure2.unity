@@ -184,6 +184,10 @@ Prefab:
       propertyPath: m_Name
       value: shark
       objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: a3e2567f416c84ea7abf72f39f66d001, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42c0544ed571d452b84b2edd8b91322b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3e2567f416c84ea7abf72f39f66d001, type: 3}
   m_IsPrefabParent: 0
@@ -384,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ed659cf7a61459496f7d25abb91852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showOnScreen: 1
+  showInConsole: 1
 --- !u!1 &962888498
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishTypes: []
-  fishCount: 200
   interval: .5
   lureCode: 0
   radiusOfOrientation: 60
@@ -691,11 +696,13 @@ MonoBehaviour:
     height: 0
     heightGameObject: {fileID: 0}
     heightTerrain: {fileID: 0}
+    meshCollider: {fileID: 0}
     heightPadding: 0
   ceilingBoundary:
     height: 0
     heightGameObject: {fileID: 0}
     heightTerrain: {fileID: 0}
+    meshCollider: {fileID: 0}
     heightPadding: 0
 --- !u!4 &1667340229
 Transform:
